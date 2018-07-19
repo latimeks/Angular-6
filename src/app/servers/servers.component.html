@@ -1,2 +1,16 @@
 <h2>Servers are listed here</h2>
-<button [disabled] = "allowNewServer">Add Server</button>
+
+<!--Method 1: Event Handling-->
+<!-- <label>Server Name</label>
+<input type=text (input)="onUpdateServerName($event)" />
+<b>{{serverName}}</b> -->
+
+<!--Method 2: 2-way binding-->
+<label>Server Name</label>
+<input type=text [(ngModel)]="serverName" />
+
+
+<button [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<p>{{allowNewServer}} or use property binding below</p>
+<p [innerText]="allowNewServer"></p>
+<p>{{serverCreationStatus}}</p>
