@@ -1,3 +1,25 @@
-<p>
-  userform works!
-</p>
+<mat-card>
+      <mat-card-header>
+                  <h2>Userform</h2>
+      </mat-card-header>
+      <mat-card-content>
+            <p><b>Req 1: 2-way binding</b></p>
+            <mat-form-field>
+                  <input matInput
+                              [(ngModel)]="UserName"
+                              (keyup)="onChangeCheckLength()"
+                              placeholder="UserName"/>
+            </mat-form-field>
+            <hr />
+            <p><b>Req 2: String Interpolation</b></p>
+            <p>{{UserName}}</p>
+            <hr />
+            <p><b>Req 3 + 4: Property Binding and Event Handling</b></p>
+      </mat-card-content>
+      <mat-card-actions>
+            <button mat-raised-button
+                          (click)="onClickReset()"
+                          [disabled]= "Inactive"
+                          color='accent'>CLEAR</button>
+      </mat-card-actions>
+</mat-card>
