@@ -1,25 +1,20 @@
-<mat-card>
-      <mat-card-header>
-                  <h2>Userform</h2>
-      </mat-card-header>
-      <mat-card-content>
-            <p><b>Req 1: 2-way binding</b></p>
-            <mat-form-field>
-                  <input matInput
-                              [(ngModel)]="UserName"
-                              (keyup)="onChangeCheckLength()"
-                              placeholder="UserName"/>
-            </mat-form-field>
-            <hr />
-            <p><b>Req 2: String Interpolation</b></p>
-            <p>{{UserName}}</p>
-            <hr />
-            <p><b>Req 3 + 4: Property Binding and Event Handling</b></p>
-      </mat-card-content>
-      <mat-card-actions>
-            <button mat-raised-button
-                          (click)="onClickReset()"
-                          [disabled]= "Inactive"
-                          color='accent'>CLEAR</button>
-      </mat-card-actions>
+<mat-card class='main-card'>
+  <mat-card-header>
+    <h2>Userform</h2>
+  </mat-card-header>
+  <mat-card-subtitle>
+    <p>Implementation of 2-way binding, string Interpolation, property binding and event handling</p>
+  </mat-card-subtitle>
+  <mat-card-content>
+    <mat-form-field>
+      <input matInput [(ngModel)]="UserName" (keyup)="onChangeCheckLength()" placeholder="UserName" />
+    </mat-form-field>
+    <p>{{UserName}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="onClickReset()" [disabled]="Inactive" color='accent'>CLEAR</button>
+  </mat-card-actions>
+  <mat-card-footer>
+    <p class='footer'>App 2: Databinding practice</p>
+  </mat-card-footer>
 </mat-card>
