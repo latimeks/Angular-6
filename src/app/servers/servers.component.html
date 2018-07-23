@@ -11,6 +11,8 @@
 
 
 <button [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
-<p>{{allowNewServer}} or use property binding below</p>
-<p [innerText]="allowNewServer"></p>
-<p>{{serverCreationStatus}}</p>
+<p>{{allowNewServer}}</p>
+<!-- <p [innerText]="allowNewServer"></p> -->
+
+<!--This should be a directive-->
+<p *ngIf="serverCreated">{{serverCreationStatus}} serverName is {{serverName}} </p>
