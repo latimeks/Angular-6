@@ -9,7 +9,7 @@
     <mat-form-field>
       <input matInput [(ngModel)]="UserName" (keyup)="onChangeCheckLength()" placeholder="UserName" />
     </mat-form-field>
-    <p>{{UserName}}</p>
+    <p>User name entered above is: {{UserName}}</p>
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button (click)="onClickReset()" [disabled]="Inactive" color='accent'>CLEAR</button>
