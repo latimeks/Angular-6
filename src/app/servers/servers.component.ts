@@ -10,6 +10,7 @@ allowNewServer: boolean = false;
 serverCreationStatus :string = "No Server was created";
 serverName :string = '';
 serverCreated :boolean = false;
+servers :array = ["TestServer", "TestServer2"];
   constructor() {
         setTimeout(()=>{
              this.allowNewServer = true
@@ -21,7 +22,8 @@ serverCreated :boolean = false;
 
   onCreateServer(){
     this.serverCreated = true;
-    this.serverCreationStatus = `Server was created! and name was ${this.serverName}`;
+    this.servers.push(this.serverName);
+    this.serverCreationStatus = `Server was created! and name was ${this.serverName.toUpperCase()}`;
   }
   onUpdateServerName(event :any){
     this.serverName = event.target.value;

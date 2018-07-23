@@ -3,7 +3,12 @@
 import {Component} from '@angular/core'
 @Component({
   selector:'app-server',
-  templateUrl: './server.component.html'
+  templateUrl: './server.component.html',
+  styles: [`
+  .online{
+    color:white;
+  }
+  `]
 })
 export class ServerComponent {
       id = 10;
@@ -11,5 +16,11 @@ export class ServerComponent {
       state: string = "Running"
       getServerStatus(){
             return this.state
+      }
+      getColor(){
+        return this.state == 'Running'? 'green' : 'red';
+      }
+      constructor(){
+        this.state = Math.random() > 0.5 ? 'Running' : 'Updating';
       }
 }
