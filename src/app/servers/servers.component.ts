@@ -10,7 +10,7 @@ allowNewServer: boolean = false;
 serverCreationStatus :string = "No Server was created";
 serverName :string = '';
 serverCreated :boolean = false;
-servers :array = ["TestServer", "TestServer2"];
+servers :string[] = ["TestServer", "TestServer2"];
   constructor() {
         setTimeout(()=>{
              this.allowNewServer = true
