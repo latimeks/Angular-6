@@ -9,5 +9,16 @@
         <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
       </ol>
     </div>
+    <div class='col-xs-12'>
+      <button (click)="updateLog($event.clientX, $event.clientY)" class='btn btn-primary'>Display Details</button>
+      <p *ngIf="Active">{{data}}</p>
+    </div>
+    <div class='col-xs-12'>
+      <ul>
+        <li *ngFor="let evt of clickResponses; index as idx" [ngClass]="{'special-event': idx >= classFlag}" [ngStyle]="{backgroundColor: idx >= classFlag ? 'teal' : 'white'}">
+          Index: {{idx}},<br /> Event Type: {{evt.eventType}},<br /> ClientXPosition: {{evt.clientX}},<br /> ClientYPosition: {{evt.clientY}},<br/> TimeStamp: {{evt.timeStamp}}
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
