@@ -1,0 +1,111 @@
+/*
+    LocName: Cherokee Medical Center
+    http://localhost:2222/c/chs/chs01/CSCH0197
+    https://www.datapreregister.com/c/chs01/CSCH0197
+    #91052C primary
+    #c5073d secondary
+    #f83a70 :hover
+*/
+
+/* header bar color */
+
+div#pageHeader div.row.bar {
+  background-color: #91052C !important;
+}
+
+/* head bar text color */
+
+div#pageHeader div.row.bar h2 {
+  /*color: #fff; */
+}
+
+/* page titles */
+
+h1 {
+  /*color: #91052C;*/
+  /*font-weight: bold;*/
+}
+
+/* primary button */
+
+.btn.btn-primary {
+  background-color: #91052C !important;
+}
+
+/* primary button on hover */
+
+.btn.btn-primary:hover {
+  background-color: #f83a70 !important;
+}
+
+/* secondary button */
+
+.btn.btn-secondary {
+  background-color: #c5073d !important;
+}
+
+/* secondary button on hover */
+
+.btn.btn-secondary:hover {
+  background-color: #f83a70 !important;
+}
+
+/* info button */
+
+.btn.btn-info {
+  background-color: #c5073d !important;
+}
+
+/* info button on hover */
+
+.btn.btn-info:hover {
+  background-color: #f83a70 !important;
+}
+
+/* form section headers */
+
+/* login block */
+
+body.page-login #gpf {
+  /*background-color: #000;*/
+  opacity: .95;
+}
+
+/* login area text */
+
+body.page-login h2, body.page-login form legend {
+  /*color: #fff;*/
+}
+
+/* login area forgot password link */
+
+body.page-login #gpf a#loginForgotPassword {
+  /*color: #fff;*/
+}
+
+/* navigation links */
+
+ul.navInline li a {
+  /*color: #91052C;
+    font-weight: bold;*/
+}
+
+/*Login buttons*/
+
+body.page-login .button-group .btn {
+  background-color: #c5073d !important;
+}
+
+body.page-login .button-group .btn:hover {
+  background-color: #f83a70 !important;
+}
+
+/*Cards on hover*/
+
+#navPublic {
+  background-color: #c5073d !important;
+}
+
+#navPublic li:hover {
+  background-color: #f83a70 !important;
+}

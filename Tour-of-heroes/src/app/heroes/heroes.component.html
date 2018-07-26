@@ -1,0 +1,27 @@
+<h2>Heroes Iteration</h2>
+<!--Without the router, renders component in line-->
+<!-- <ul class='heroes'>
+  <li *ngFor='let hero of heroesList' (click)='onClick(hero)' [class.selected]="hero === clickedHero">
+    <span class='badge'>{{hero.id}}</span>
+    <b>{{hero.name | uppercase}}</b>
+  </li>
+</ul> -->
+<!--This piece will be pulled into a new route of it's own  -->
+<!-- <app-hero-details [hero] = 'clickedHero'></app-hero-details> -->
+
+<!--With routing configured-->
+<div>
+  <label>Hero name: <input #heroName /></label>
+  <button (click)="add(heroName.value); heroName.value=''">
+    add
+  </button>
+</div>
+<ul class='heroes'>
+  <li *ngFor='let hero of heroesList'>
+    <a routerLink="/detail/{{hero.id}}">
+      <span class='badge'>{{hero.id}}</span>
+      <b>{{hero.name | uppercase}}</b>
+    </a>
+    <button class='delete' title='Delete Hero' (click)="delete(hero)">Kill Hero</button>
+  </li>
+</ul>

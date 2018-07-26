@@ -1,0 +1,20 @@
+<mat-card class='main-card'>
+  <mat-card-header>
+    <h2>Userform</h2>
+  </mat-card-header>
+  <mat-card-subtitle>
+    <p>Implementation of 2-way binding, string Interpolation, property binding and event handling</p>
+  </mat-card-subtitle>
+  <mat-card-content>
+    <mat-form-field>
+      <input matInput [(ngModel)]="UserName" (keyup)="onChangeCheckLength()" placeholder="UserName" />
+    </mat-form-field>
+    <p>User name entered above is: {{UserName}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="onClickReset()" [disabled]="Inactive" color='accent'>CLEAR</button>
+  </mat-card-actions>
+  <mat-card-footer>
+    <p class='footer'>App 2: Databinding practice</p>
+  </mat-card-footer>
+</mat-card>

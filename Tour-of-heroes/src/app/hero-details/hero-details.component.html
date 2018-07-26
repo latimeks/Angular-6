@@ -1,0 +1,13 @@
+<div *ngIf='hero'>
+  <p>Hero id: {{hero.id}}:</p>
+  <ul>
+    <li><b>{{hero.name | uppercase}}</b></li>
+    <li>{{hero.power}}</li>
+    <li>{{hero.origin}}</li>
+  </ul>
+  <label>Change Name Request: </label>
+  <input type='text' placeholder='Name' [(ngModel)]='hero.name' />
+  <button (click)="write()">Save</button>
+  <button (click)="goBack()">Return</button>
+</div>
+<!-- The above directive requires a new import of forms module in app module-->
